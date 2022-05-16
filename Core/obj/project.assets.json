@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Kurslar\\ASP.NET_MVC_CORE\\NLayerApp\\Core\\Core.csproj",
+      "projectUniqueName": "C:\\Users\\firatalcin\\Documents\\GitHub\\NLayerWebAPI\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "D:\\Kurslar\\ASP.NET_MVC_CORE\\NLayerApp\\Core\\Core.csproj",
+      "projectPath": "C:\\Users\\firatalcin\\Documents\\GitHub\\NLayerWebAPI\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\firatalcin\\.nuget\\packages\\",
-      "outputPath": "D:\\Kurslar\\ASP.NET_MVC_CORE\\NLayerApp\\Core\\obj\\",
+      "outputPath": "C:\\Users\\firatalcin\\Documents\\GitHub\\NLayerWebAPI\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

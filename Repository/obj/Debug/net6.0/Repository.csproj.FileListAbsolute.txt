@@ -13,3 +13,5 @@ C:\Users\firatalcin\Documents\GitHub\NLayerWebAPI\Repository\obj\Debug\net6.0\Re
 C:\Users\firatalcin\Documents\GitHub\NLayerWebAPI\Repository\obj\Debug\net6.0\refint\Repository.dll
 C:\Users\firatalcin\Documents\GitHub\NLayerWebAPI\Repository\obj\Debug\net6.0\Repository.pdb
 C:\Users\firatalcin\Documents\GitHub\NLayerWebAPI\Repository\obj\Debug\net6.0\ref\Repository.dll
+C:\Users\firatalcin\Documents\GitHub\NLayerWebAPI\Repository\bin\Debug\net6.0\Repository.runtimeconfig.json
+C:\Users\firatalcin\Documents\GitHub\NLayerWebAPI\Repository\obj\Debug\net6.0\Repository.genruntimeconfig.cache

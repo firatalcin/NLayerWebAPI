@@ -1,12 +1,7 @@
 ﻿using Core;
 using Microsoft.EntityFrameworkCore;
 using Repository.Configurations;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+using Repository.Seeds;
 
 namespace Repository.Context
 {
@@ -30,6 +25,30 @@ namespace Repository.Context
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfiguration(new ProductFeatureConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+
+            modelBuilder.ApplyConfiguration(new CategorySeed());
+            modelBuilder.ApplyConfiguration(new ProductSeed());
+
+            modelBuilder.Entity<ProductFeature>().HasData(
+                new ProductFeature
+                {
+                    Id = 1,
+                    Color = "Kırmızı",
+                    Height = 12,
+                    Width = 2,
+                    ProductId = 1
+                },
+                 new ProductFeature
+                 {
+                     Id = 2,
+                     Color = "Mavi",
+                     Height = 12,
+                     Width = 3,
+                     ProductId = 2
+                 }
+                );
+
+
         }
     }
 }

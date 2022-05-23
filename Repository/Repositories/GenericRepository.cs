@@ -36,11 +36,9 @@ namespace Repository.Repositories
             return await _dbSet.AnyAsync(filter);
         }
 
-        public IQueryable<T> GetAll(Expression<Func<T, bool>> filter)
+        public IQueryable<T> GetAll()
         {
-            return filter == null ?
-                _dbSet.AsNoTracking().AsQueryable() : //Ef core alınan kayıtları izlemez böylelikle performans artar
-                _dbSet.AsNoTracking().Where(filter).AsQueryable();
+            return _dbSet.AsNoTracking().AsQueryable();//Ef core alınan kayıtları izlemez böylelikle performans artar              
         }
 
         public async Task<T> GetByIdAsync(int id)

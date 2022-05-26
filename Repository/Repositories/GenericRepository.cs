@@ -15,7 +15,7 @@ namespace Repository.Repositories
         protected readonly AppDbContext _context;
         private readonly DbSet<T> _dbSet;
 
-        public GenericRepository(AppDbContext context, DbSet<T> dbSet)
+        public GenericRepository(AppDbContext context)
         {
             _context = context;
             _dbSet = _context.Set<T>();
@@ -43,7 +43,7 @@ namespace Repository.Repositories
 
         public async Task<T> GetByIdAsync(int id)
         {
-            return await _dbSet.FindAsync(id);
+            return await _dbSet.FindAsync(id) ?? throw new InvalidOperationException(); 
         }
 
         public void Remove(T entity)

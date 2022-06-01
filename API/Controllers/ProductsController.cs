@@ -7,24 +7,22 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-   
+
     public class ProductsController : CustomBaseController
     {
         private readonly IMapper _mapper;
-        private readonly IService<Product> _service;
-        private readonly IProductService _productService;
+        private readonly IProductService _service;
 
         public ProductsController(IService<Product> service, IMapper mapper, IProductService productService)
         {
-            _service = service;
             _mapper = mapper;
-            _productService = productService;
+            _service = productService;
         }
 
         [HttpGet("[action]")]
         public async Task<IActionResult> GetProductWithCategory()
         {
-            return CreateActionResult(await _productService.GetProductsWithCategory());
+            return CreateActionResult(await _service.GetProductsWithCategory());
         }
 
         [HttpGet]
@@ -63,12 +61,12 @@ namespace API.Controllers
         {
             var product = await _service.GetByIdAsync(id);
 
-            if(product == null)
+            if (product == null)
             {
                 return CreateActionResult(CustomResponseDto<CustomNoContentResponseDto>.Fail(404, "bu id'ye sahip ürün bulunamadı"));
             }
 
-            await _service.RemoveAsync(product);           
+            await _service.RemoveAsync(product);
             return CreateActionResult(CustomResponseDto<CustomNoContentResponseDto>.Success(204));
         }
     }

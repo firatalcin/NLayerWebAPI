@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using API.Filters;
+using AutoMapper;
 using Core;
 using Core.DTOs;
 using Core.Services;
